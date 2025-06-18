@@ -1,0 +1,2262 @@
+<html lang="en"><head>
+    <script type="module">
+import RefreshRuntime from "/@react-refresh"
+RefreshRuntime.injectIntoGlobalHook(window)
+window.$RefreshReg$ = () => {}
+window.$RefreshSig$ = () => (type) => type
+window.__vite_plugin_react_preamble_installed__ = true
+</script>
+
+    <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce-Idea</title>
+  <style id="_goober"> @keyframes go2264125279{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go3020080000{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}@keyframes go463499852{from{transform:scale(0) rotate(90deg);opacity:0;}to{transform:scale(1) rotate(90deg);opacity:1;}}@keyframes go1268368563{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}@keyframes go1310225428{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go651618207{0%{height:0;width:0;opacity:0;}40%{height:0;width:6px;opacity:1;}100%{opacity:1;height:10px;}}@keyframes go901347462{from{transform:scale(0.6);opacity:0.4;}to{transform:scale(1);opacity:1;}}.go4109123758{z-index:9999;}.go4109123758 > *{pointer-events:auto;}</style><style type="text/css" data-vite-dev-id="C:/Users/yamini/OneDrive/Desktop/Ecommerce-idea/public/index.css">/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
+  position: fixed;
+  top:5%;
+  background-color: white;
+  transition: box-shadow 0.3s ease;
+  z-index: 1000;
+  transition: top 0.75s ease-in-out;
+}
+
+.navbar.scrolled {
+    top: 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: top 0.75s ease-in-out;
+}
+
+.navbar__left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.navbar__menu a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+}
+
+.navbar__category {
+  border: 2px dotted #007BFF;
+  padding: 2px 12px;
+  margin: 0rem 5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.navbar__menu a:hover,
+.navbar__category:hover {
+  color: #007BFF;
+}
+
+.navbar__right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__right .icon {
+  width: 18px;
+  height: 18px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+.dropdown {
+  position: absolute;
+  top: 150%;
+  right: -10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+  padding: 5px 0;
+  z-index: 1000;
+}
+
+.dropdown1 {
+  position: absolute;
+  top: 100%;
+  right: -10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+  padding: 5px 0;
+  z-index: 1000;
+}
+
+.dropdown1 a {
+  padding: 8px 15px;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.dropdown1 a:hover {
+  background-color: #f5f5f5;
+}
+.dropdown a {
+  padding: 8px 15px;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.dropdown a:hover {
+  background-color: #f5f5f5;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.hamburger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: white;
+  width: 100%;
+  padding: 10px 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.mobile-menu a {
+  padding: 10px 0;
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .navbar__menu,
+  .navbar__category {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+}
+
+
+/* herosection */
+
+.hero-section {
+  display: flex;
+ /* max-width: 1140px; */
+  /* max-width: 1200px; */
+  /* height: 80vh; */
+  overflow: hidden;
+  position: relative;
+  /* background-color: #ff4b4b; */
+
+  margin: 0 auto;
+    margin-top: 4rem;
+}
+
+.left, .right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s ease-in-out;
+}
+
+/* Initial positions for animation */
+.left {
+
+  color: #0c0c0c;
+  transform: translateX(-100%);
+}
+
+.right {
+  background-color: #ffffff;
+  transform: translateX(100%);
+}
+
+/* Animate in on load */
+.loaded .left {
+  transform: translateX(0);
+}
+
+.loaded .right {
+  transform: translateX(0);
+}
+
+.content {
+  text-align: center;
+  max-width: 80%;
+}
+
+.content h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.content p {
+  margin-bottom: 1.5em;
+  font-size: 1.2em;
+  line-height: 1.4;
+}
+
+.btn {
+  padding: 0.75em 1.5em;
+  background-color: #ff6363;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff4b4b;
+}
+
+.image {
+  width: 80%;
+  max-width: 800px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* footer */
+
+footer {
+width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    width: -moz-fit-content;
+    /* width: fit-content; */
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.newsletter {
+  margin-bottom: 20px;
+}
+
+.newsletter h4 {
+  font-size: 20px;
+  padding: 0px 20px;
+  margin-bottom: 10px;
+}
+
+.newsletter p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.newsletter input[type="email"] {
+  padding: 10px;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background-color: #e55b00;
+}
+
+/* Footer menu styling */
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  border-top: 1px solid #666;
+  padding-top: 20px;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  border-left: 1px solid #666;
+}
+.footer-menu:first-child {
+  border-left: none;
+}
+
+.footer-menu h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-menu ul li {
+  margin: 5px 0;
+}
+
+.footer-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-menu ul li a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* categorys */
+/* Main layout */
+.layout-cx {
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* Header with title and navigation buttons */
+.header-cx {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  width: 980px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  
+}
+.navigation .button-cx{
+    margin: 0rem 0.1rem;
+}
+.title-cx {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Buttons styling */
+.button-cx {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-cx:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+/* Card container =========================*/
+.card-container-cx {
+  display: flex;
+  justify-content: center;
+  /* overflow: hidden; */
+  row-gap: 50px;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+/* Circle card styling */
+.card-cx {
+  width: 300px;
+  height: 300px;
+  /* border-radius: 50%; */
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  /* background-color: #f5f5f5; */
+  position: relative;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+
+
+/* Card image */
+.card-image-cx {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* border-radius: 50%; */
+}
+
+/* Card title */
+.card-title-cx {
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  color: #0c0c0c;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: -40px;
+}
+
+
+
+/* cards  */
+
+/* CardList-px.css */
+.card-list-px {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header-px {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-px h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header-px a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.header-px a:hover {
+  color: #0056b3;
+}
+
+.card-grid-px {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+
+
+/* cards */
+
+/* Card-px.css */
+
+.card-px {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  position: relative;
+ 
+
+}
+
+
+.card-image-px {
+  position: relative;
+}
+
+.card-image-px img {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  transition: all 0.75s ease-in-out;
+}
+
+.add-to-cart-px {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 10px); /* Start slightly below */
+  opacity: 0;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: opacity 0.3s ease, transform 0.3s ease, padding 0.3s ease-in-out; /* Transition for opacity and transform */
+}
+
+.card-px:hover .add-to-cart-px {
+  opacity: 1;
+  transform: translate(-50%, 0); /* Move to original position */
+}
+.card-px:hover .card-image-px img {
+  transform: scale(1.05);
+}
+
+.add-to-cart-px:hover{
+     padding: 10px 22px;
+}
+
+.card-content-px {
+  padding: 15px;
+  text-align: center;
+}
+
+.colors-px {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+.color-px {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.rating-px {
+  color: #ffc107;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.prices-px {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.original-price-px {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.sale-price-px {
+  color: #ff5722;
+  font-weight: bold;
+}
+
+/* CardList-px.css */
+.card-list-px {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header-px {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-px h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header-px a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.header-px a:hover {
+  color: #0056b3;
+}
+
+.card-grid-px {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+
+/* add to cart */
+
+
+.product-detail-container {
+  display: flex;
+  width: 1140px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  gap: 30px;
+  margin-top: 4rem;
+}
+
+.product-image-gallery {
+  flex: 1;
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.thumbnail-container {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.thumbnail.active {
+  border: 2px solid #007bff;
+  opacity: 1;
+}
+
+.product-info-1 {
+  flex: 1.5;
+}
+
+.price-range {
+  color: #007bff;
+  font-size: 24px;
+  margin-top: 5px;
+}
+
+.rating {
+  font-size: 18px;
+  color: #ff9800;
+  margin: 10px 0;
+}
+
+.description {
+  margin: 10px 0;
+  color: #555;
+}
+
+.size-options, .color-options, .quantity-control {
+  margin-top: 15px;
+}
+
+.size-buttons, .color-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.size-btn {
+  padding: 8px 12px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.size-btn.selected {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.color-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.color-btn.selected {
+  border-color: #007bff;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-control button {
+  width: 30px;
+  height: 30px;
+  background-color: #f1f1f1;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.buy-now-btn, .add-to-cart-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.buy-now-btn {
+  background-color: #ff3d71;
+  color: white;
+}
+
+.add-to-cart-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+
+/* login */
+
+.login-layout {
+  display: flex;
+
+  max-width: 1200px;
+ 
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+   margin-top: 2rem;
+   height: 90vh;
+}
+.side-image-login{
+  width: 45%;
+}
+.side-image-login img{
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: #ffffff;
+  padding: 20px;
+  width: 350px;
+  border-radius: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    margin-top: 2rem;
+}
+
+::-moz-placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    
+}
+
+::placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    
+}
+
+.form button {
+  align-self: flex-end;
+}
+
+.flex-column > label {
+  color: #151717;
+  font-weight: 600;
+}
+
+.inputForm {
+  border: 1.5px solid #ecedec;
+  border-radius: 10px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+Input {
+  margin-left: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 85%;
+  /* height: 100%; */
+}
+
+Input:focus {
+  outline: none;
+}
+
+.inputForm:focus-within {
+  border: 1.5px solid #2d79f3;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.flex-row > div > label {
+  font-size: 14px;
+  color: black;
+  font-weight: 400;
+}
+
+.span {
+  font-size: 14px;
+  margin-left: 5px;
+  color: #2d79f3;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.button-submit {
+  margin: 20px 0 10px 0;
+  background-color: #151717;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  height: 40px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.button-submit:hover {
+  background-color: #252727;
+}
+
+.p {
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.btn-b {
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  gap: 10px;
+  border: 1px solid #ededef;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-b:hover {
+  border: 1px solid #2d79f3;
+}
+/* cart */
+
+.cart-container {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  margin-top: 3rem;
+}
+
+h2 {
+  text-align: left;
+}
+
+.clear-cart-btn {
+  float: right;
+  background-color: transparent;
+  color: #007bff;
+  border: none;
+  cursor: pointer;
+}
+
+.clear-cart-btn:hover {
+  text-decoration: underline;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.cart-table th, .cart-table td {
+  padding: 12px;
+  text-align: left;
+  /* border-bottom: 1px solid #ddd; */
+}
+
+.cart-table th {
+  background-color: #f9fafb;
+  font-weight: 600;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+}
+
+.product-image {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #666;
+  margin-right: 50px;
+}
+
+.remove-btn:hover {
+  color: #000;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quantity-control button {
+  background-color: #f1f1f1;
+  border: none;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.total {
+  text-align: right;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-right: 5.5rem;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/yamini/OneDrive/Desktop/Ecommerce-idea/src/index.css">*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}/*
+! tailwindcss v3.4.14 | MIT License | https://tailwindcss.com
+*//*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  font-feature-settings: normal; /* 5 */
+  font-variation-settings: normal; /* 6 */
+  -webkit-tap-highlight-color: transparent; /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-feature-settings: normal; /* 2 */
+  font-variation-settings: normal; /* 3 */
+  font-size: 1em; /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-feature-settings: inherit; /* 1 */
+  font-variation-settings: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  letter-spacing: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+[hidden]:where(:not([hidden="until-found"])) {
+  display: none;
+}
+/* Hide spin buttons for number inputs */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+  -webkit-appearance: textfield;
+          appearance: textfield; /* Standard */
+}
+/* profile page css =====================================*/
+.app-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+.sidebar {
+  width: 250px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.profile img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+.profile p {
+  margin: 5px 0;
+  color: #555;
+}
+.menu {
+
+  list-style: none;
+  padding: 0;
+}
+.menu li {
+  border-bottom: 2px solid #0c0c0c;
+  margin-top: 1rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #555;
+}
+.menu li:hover, .menu li.active {
+  background-color: #007bff;
+  color: white;
+}
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  overflow-y: auto;
+}
+/* about us================================= */
+.about-page-cx2 {
+  margin-top: 4rem;
+  width: 100%;
+}
+/* Banner Section */
+.banner-cx2 {
+  background: url("https://niche-26.woovinafree.com/wp-content/uploads/2019/01/Title_bg.jpg")
+    no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+  margin-top: 4rem;
+}
+.banner-cx2 h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+.banner-cx2 p {
+  margin-top: 10px;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+/* About Section */
+.about-content-cx2 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.about-text-cx2 {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 20px;
+}
+.about-text-cx2 h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+.about-text-cx2 p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+.about-stats-cx2 {
+  display: flex;
+  flex: 1;
+  min-width: 300px;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+.stat-cx2 {
+  text-align: center;
+}
+.stat-cx2 h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #333;
+}
+.stat-cx2 p {
+  font-size: 1rem;
+  color: #777;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content-cx2 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text-cx2 {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .about-stats-cx2 {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .stat-cx2 h1 {
+    font-size: 2.5rem;
+  }
+
+  .stat-cx2 p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 480px) {
+  .banner-cx2 h1 {
+    font-size: 2.5rem;
+  }
+
+  .banner-cx2 p {
+    font-size: 0.9rem;
+  }
+
+  .about-text-cx2 h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-text-cx2 p {
+    font-size: 0.9rem;
+  }
+
+  .stat-cx2 h1 {
+    font-size: 2rem;
+  }
+
+  .stat-cx2 p {
+    font-size: 0.8rem;
+  }
+}
+/* about us why choose us */
+.why-choose-us {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+.why-choose-us h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  flex-wrap: wrap;
+}
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 250px;
+  margin-bottom: var(--icon-box-icon-margin, 15px);
+  margin-right: auto;
+  margin-left: auto;
+}
+.icon {
+  font-size: 40px;
+  color: #555;
+  margin-bottom: 20px;
+}
+.feature h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+
+  background-color: #fff;
+}
+.feature p {
+  color: #969ca7;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 28px;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  padding-bottom: 20px;
+}
+.line {
+  border-style: solid;
+  border-width: 1px 0 0 0;
+  border-color: #ebeef2;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+}
+.icon {
+  height: 40px;
+}
+/* Images*/
+.logo {
+  display: flex;
+}
+.pictures {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  width: 190px;
+  aspect-ratio: auto 190 / 100;
+  padding: 60px;
+  padding-top: 10px;
+}
+/* news letter*/
+.newsletter-section {
+  background: url("https://images.unsplash.com/photo-1503455637927-73…iUyMGJhY2tncm91bmQlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D")
+    no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5); /* Add a slight overlay */
+  padding: 30px;
+  border-radius: 10px;
+}
+.content h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #ccc;
+}
+.content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.content p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.newsletter-form input {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  flex: 1;
+  max-width: 400px;
+}
+.newsletter-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.newsletter-form button:hover {
+  background-color: #ffffff;
+  color: rgb(210, 82, 82);
+}
+/* showaddcrat */
+.cart-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.cart-modal {
+  background: #fff;
+  width: 400px;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.cart-modal-header {
+  margin-bottom: 20px;
+}
+.icon-check {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px;
+  background: #aa4545;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-check::after {
+  content: "✔";
+  color: #fff;
+  font-size: 24px;
+}
+.cart-modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+.btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.continue-shopping {
+  background: #aa4545;
+  color: white;
+}
+.go-to-cart {
+  background: black;
+  color: white;
+}
+.free-shipping-note {
+  font-size: 14px;
+  color: gray;
+}
+/* contact us  */
+/* General Reset */
+/* Contact Container */
+.contact-container-cux {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 1200px;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-image: url("https://via.placeholder.com/1920x1080"); /* Replace with actual background */
+  background-size: cover;
+  background-position: center;
+}
+.contact-form-cux {
+  width: 60%;
+}
+/* Scoped Input Styles */
+.contact-form-cux .input-cux,
+.contact-form-cux .textarea-cux {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
+}
+.contact-form-cux .input-cux:focus,
+.contact-form-cux .textarea-cux:focus {
+  border-color: #a83232;
+  box-shadow: 0 0 5px rgba(168, 50, 50, 0.5);
+}
+.contact-form-cux .textarea-cux {
+  min-height: 120px;
+  resize: none;
+}
+/* Submit Button */
+.btn-cux {
+  padding: 12px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background: #a83232;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btn-cux:hover {
+  background: #8a2929;
+}
+/* Contact Info Section */
+.contact-info-cux {
+  flex: 1;
+  min-width: 300px;
+  color: #333;
+  line-height: 1.6;
+}
+.contact-info-cux h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.contact-info-cux p {
+  margin: 5px 0;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container-cux {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .contact-form-cux {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .contact-form-cux .input-cux,
+  .contact-form-cux .textarea-cux {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+
+  .btn-cux {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
+  .contact-info-cux h2 {
+    font-size: 1.2rem;
+  }
+
+  .contact-info-cux p {
+    font-size: 0.9rem;
+  }
+}
+/* proceed to check out ==================== */
+/* General Container */
+.checkout-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem;
+  font-family: Arial, sans-serif;
+}
+.checkout-billing,
+.checkout-summary {
+  flex: 1 1 45%;
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.checkout-summary {
+  max-width: 400px;
+}
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+textarea {
+  resize: none;
+}
+.checkout-row {
+  display: flex;
+  gap: 1rem;
+}
+.checkout-column {
+  flex: 1;
+}
+.checkout-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.checkout-checkbox input {
+  margin-right: 0.5rem;
+}
+.checkout-login a {
+  color: #0073aa;
+  text-decoration: none;
+}
+.checkout-login a:hover {
+  text-decoration: underline;
+}
+.checkout-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+.checkout-table th,
+.checkout-table td {
+  text-align: left;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+}
+.checkout-radio {
+  
+  margin-bottom: 1rem;
+}
+.checkout-radio input {
+  margin-right: 0.5rem;
+}
+.checkout-button {
+  background: #0073aa;
+  color: #fff;
+  padding: 0.8rem;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.checkout-button:hover {
+  background: #005c8a;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .checkout-container {
+    flex-direction: column;
+  }
+  .checkout-summary {
+    max-width: 100%;
+  }
+}
+/* profile page =============================*/
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap'); */
+.myaccount-card1{
+  margin-top: 4rem;
+}
+.card2-nav-container{
+  display: flex;
+}
+.card1-button1 {
+  background-color: transparent;
+  border-width: 0px;
+  font-weight: bold;
+  color: rgb(182, 182, 182);
+}
+.card1-button2 {
+  background-color: transparent;
+  border-width: 0px;
+  font-weight: bold;
+  color: rgb(60, 146, 245);
+}
+.card1-heading {
+  font-weight: bold;
+  font-family: roboto;
+}
+.card1-img {
+  height: 20vh;
+}
+@media only screen and (max-width: 768px) {
+  .card3-input {
+    width: 50vw;
+  }
+  .card3-button {
+    width: 10vw;
+  }
+
+
+  .card2-nav {
+    width: 30vw;
+  }
+  .card2-nav-container {
+    display: flex;
+  }
+  .card3-card2 {
+    display: flex;
+  }
+}
+.profile-logo {
+  height: 15vh;
+  border-radius: 40%;
+}
+.profile-heading {
+  font-weight: bold;
+  font-family: roboto;
+}
+.profile-para {
+  font-family: roboto;
+  color: #bdbdbd;
+}
+.card2-profile {
+  padding: 20px;
+}
+.card2-nav {
+  width: 40%;
+  padding: 20px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(214, 214, 214);
+  border-radius: 10px;
+  text-align: center;
+}
+.nav-item {
+  font-family: roboto;
+  color: #bdbdbd;
+  padding: 10px;
+  border-radius: 5px;
+}
+.nav-item:hover {
+  background-color: #d1d1d1;
+  color: rgb(81, 173, 248);
+}
+.card2-results {
+  padding: 20px;
+}
+.myaccount-card3 {
+  border-radius: 10px;
+  margin-top: 10px;
+  background-image: url("https://wallpapers.com/images/hd/airpods-purple-aesthetic-n59ugpgdcwzn7pxa.jpg");
+  background-size: cover;
+  height: 45vh;
+  padding: 20px;
+}
+.card3-h6 {
+  font-weight: bold;
+  font-family: roboto;
+}
+.card3-h2 {
+  font-weight: bold;
+  font-family: roboto;
+  color: rgb(65, 52, 250);
+}
+.card3-input {
+  padding: 15px;
+  border-radius: 10px;
+  border-width: 0px;
+  margin: 5px;
+}
+.card3-button {
+  padding: 15px;
+  border-radius: 10px;
+  border-width: 0px;
+  margin: 5px;
+  background-color: #747272;
+}
+.card3-button:hover {
+  background-color: #575757;
+}
+.card4-card1 {
+  display: flex;
+  justify-content: space-around;
+}
+.myaccount-card4 {
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.card4-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+}
+.card4-h {
+  font-weight: bold;
+  font-family: roboto;
+}
+.card4-p {
+  font-weight: bold;
+  font-family: roboto;
+  color: #a09f9f;
+}
+.card4-img {
+  font-size: 50px;
+  margin-right: 20px;
+  color: rgb(0, 60, 255);
+}
+.img-icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+</style></head>
+  <body>
+    <div id="root"><div style="position: fixed; z-index: 9999; inset: 16px; pointer-events: none;"></div><div class="flex flex-col min-h-screen" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;"><div class="up-bar" style="background-color: rgb(0, 0, 0); height: 30px; width: auto; color: rgb(255, 255, 255); display: flex; justify-content: space-between;"><div class="l-side" style="padding-left: 1rem;"><h2> get 50% festival offer</h2></div><div class="r-side" style="color: rgb(255, 255, 255);"><ul style="display: flex; padding-right: 2rem;"><li style="padding-right: 1rem;"><a href="">Contact</a></li><li style="padding-right: 1rem;"><a href="">join us</a></li><li style="padding-right: 1rem;"><a href="">more</a></li></ul></div></div><nav class="navbar "><div class="navbar__left"><div class="navbar__logo"><a href="/">Logo</a></div><div class="navbar__category">Categories</div><div class="navbar__menu"><a href="#home">Home</a><a href="/aboutus">Aboutus</a><a href="#services">Services</a><a href="/contactus">Contact</a></div></div><div class="navbar__right"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><a href="/cart"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></a><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg><div><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div><div class="hamburger-menu"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div></div></nav><main class="flex-grow"><div class="hero-section loaded"><div class="left"><div class="content"><h1>Welcome to Our Service</h1><p>Discover the best solutions tailored to your needs. Join us and experience excellence.</p><button class="btn">Get Started</button></div></div><div class="right"><img src="https://new.axilthemes.com/demo/template/etrade/assets/images/banner/women_sunglass.png" alt="Welcome" class="image"></div></div><section><div class="layout-cx"><div class="header-cx"><h2 class="title-cx">Our Categorys</h2><div class="navigation"><button class="button-cx">P</button><button class="button-cx">N</button></div></div><hr><div class="card-container-cx"><div class="card-cx"><a href="#"><img src="https://new.axilthemes.com/demo/template/etrade/assets/images/product/categories/women.png" alt="Card 1" class="card-image-cx"></a><div class="card-title-cx">Card 1</div></div><div class="card-cx"><a href="#"><img src="https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-28.png" alt="Card 2" class="card-image-cx"></a><div class="card-title-cx">Card 2</div></div><div class="card-cx"><a href="#"><img src="https://via.placeholder.com/200" alt="Card 3" class="card-image-cx"></a><div class="card-title-cx">Card 3</div></div><div class="card-cx"><a href="#"><img src="https://via.placeholder.com/200" alt="Card 4" class="card-image-cx"></a><div class="card-title-cx">Card 4</div></div></div><div class="card-container-cx"><div class="card-cx"><a href="#"><img src="https://new.axilthemes.com/demo/template/etrade/assets/images/product/categories/women.png" alt="Card 1" class="card-image-cx"></a><div class="card-title-cx">Card 1</div></div><div class="card-cx"><a href="#"><img src="https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-28.png" alt="Card 2" class="card-image-cx"></a><div class="card-title-cx">Card 2</div></div><div class="card-cx"><a href="#"><img src="https://via.placeholder.com/200" alt="Card 3" class="card-image-cx"></a><div class="card-title-cx">Card 3</div></div><div class="card-cx"><a href="#"><img src="https://via.placeholder.com/200" alt="Card 4" class="card-image-cx"></a><div class="card-title-cx">Card 4</div></div></div></div></section><section><div class="card-list-px" style="padding: 20px;"><div class="header-px"><h2>Our Products</h2><a href="/more-products">View All Products</a></div><div class="card-grid-px"><div class="card-px"><div class="card-image-px"><img src="https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-28.png" alt="Kalrez® Spectrum™ 6375"><button class="add-to-cart-px"><p>add to cart </p></button></div><div class="card-content-px"><h3>Kalrez® Spectrum™ 6375</h3><div class="rating-px">★★★★★ (6400)</div><div class="prices-px"><span class="original-price-px"> ₹$30.00</span><span class="sale-price-px"> ₹$17.84</span></div></div></div><div class="card-px"><div class="card-image-px"><img src="https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-29.png" alt="FlexiSoft® Comfort"><button class="add-to-cart-px"><p>add to cart </p></button></div><div class="card-content-px"><h3>FlexiSoft® Comfort</h3><div class="rating-px">★★★★ (5300)</div><div class="prices-px"><span class="original-price-px"> ₹$25.00</span><span class="sale-price-px"> ₹$15.00</span></div></div></div><div class="card-px"><div class="card-image-px"><img src="https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-30.png" alt="ProGuard™ Elite"><button class="add-to-cart-px"><p>add to cart </p></button></div><div class="card-content-px"><h3>ProGuard™ Elite</h3><div class="rating-px">★★★★ (4700)</div><div class="prices-px"><span class="original-price-px"> ₹$40.00</span><span class="sale-price-px"> ₹$22.50</span></div></div></div><div class="card-px"><div class="card-image-px"><img src="https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-31.png" alt="EcoFlex® Performance"><button class="add-to-cart-px"><p>add to cart </p></button></div><div class="card-content-px"><h3>EcoFlex® Performance</h3><div class="rating-px">★★★★★ (5100)</div><div class="prices-px"><span class="original-price-px"> ₹$35.00</span><span class="sale-price-px"> ₹$20.99</span></div></div></div><div class="card-px"><div class="card-image-px"><img src="https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-32.png" alt="UltraLight™ Series"><button class="add-to-cart-px"><p>add to cart </p></button></div><div class="card-content-px"><h3>UltraLight™ Series</h3><div class="rating-px">★★★★ (3900)</div><div class="prices-px"><span class="original-price-px"> ₹$50.00</span><span class="sale-price-px"> ₹$29.99</span></div></div></div><div class="card-px"><div class="card-image-px"><img src="https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-33.png" alt="PowerFit™ Max"><button class="add-to-cart-px"><p>add to cart </p></button></div><div class="card-content-px"><h3>PowerFit™ Max</h3><div class="rating-px">★★★★★ (6200)</div><div class="prices-px"><span class="original-price-px"> ₹$60.00</span><span class="sale-price-px"> ₹$34.99</span></div></div></div><div class="card-px"><div class="card-image-px"><img src="https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-34.png" alt="StaminaFlex™ Pro"><button class="add-to-cart-px"><p>add to cart </p></button></div><div class="card-content-px"><h3>StaminaFlex™ Pro</h3><div class="rating-px">★★★★ (4500)</div><div class="prices-px"><span class="original-price-px"> ₹$55.00</span><span class="sale-price-px"> ₹$31.49</span></div></div></div><div class="card-px"><div class="card-image-px"><img src="https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-35.png" alt="ResistX™ Armor"><button class="add-to-cart-px"><p>add to cart </p></button></div><div class="card-content-px"><h3>ResistX™ Armor</h3><div class="rating-px">★★★★ (7100)</div><div class="prices-px"><span class="original-price-px"> ₹$70.00</span><span class="sale-price-px"> ₹$39.99</span></div></div></div></div></div></section></main><footer><div class="footer-container"><div class="footer-menu"><h4>Shop</h4><ul><li><a href="#">About Us</a></li><li><a href="#">Delivery Information</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms &amp; Conditions</a></li><li><a href="#">Support Center</a></li><li><a href="#">Contact Us</a></li></ul></div><div class="footer-menu"><h4>Support</h4><ul><li><a href="#">About Us</a></li><li><a href="#">Delivery Information</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms &amp; Conditions</a></li><li><a href="#">Support Center</a></li><li><a href="#">Contact Us</a></li></ul></div><div class="footer-menu"><h4>Company</h4><ul><li><a href="#">About Us</a></li><li><a href="#">Delivery Information</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms &amp; Conditions</a></li><li><a href="#">Support Center</a></li><li><a href="#">Contact Us</a></li></ul></div><div class="footer-menu"><h4>Company</h4><ul><li><a href="#">About Us</a></li><li><a href="#">Delivery Information</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms &amp; Conditions</a></li><li><a href="#">Support Center</a></li><li><a href="#">Contact Us</a></li></ul></div></div></footer></div></div>
+    <script type="module" src="/src/main.tsx"></script>
+  
+
+</body></html>
